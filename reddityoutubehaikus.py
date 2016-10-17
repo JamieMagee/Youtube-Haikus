@@ -1,10 +1,13 @@
+import logging
 import re
 
 import praw
 
 
 class RedditYoutubeHaikus:
-    prog = re.compile('(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})')
+    youtube_regex = re.compile('(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})')
+
+    logger = logging.getLogger(__name__)
 
     def __init__(self, interval, amount):
         self.interval = interval
@@ -16,4 +19,10 @@ class RedditYoutubeHaikus:
 
         submissons = method(limit=self.amount)
         for submission in submissons:
-            yield self.prog.search(submission.url).group(1)
+            try:
+                yield self.youtube_regex.search(submission.url).group(1), submission.title
+            except AttributeError as e:
+                try:
+                    yield self.youtube_regex.search(submission.secure_media['oembed']['url']).group(1), submission.title
+                except:
+                    self.logger.warning("{} doesn't appear to be a YouTube link".format(submission.url))

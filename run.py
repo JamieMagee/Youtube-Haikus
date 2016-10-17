@@ -88,11 +88,11 @@ for time_period in time_periods:
             )
         ).execute()['id']
 
-    for video_id in r.get_top():
+    for video_id, title in r.get_top():
         try:
             logger.info('Adding video with id %s to playlist %s', video_id, time_period)
             youtube.playlistItems().insert(
-                part='snippet',
+                part='snippet,contentDetails',
                 body=dict(
                     snippet=dict(
                         playlistId=playlist_id,
@@ -100,9 +100,12 @@ for time_period in time_periods:
                             kind='youtube#video',
                             videoId=video_id
                         )
+                    ),
+                    contentDetails=dict(
+                        note=title
                     )
                 )
             ).execute()
         except HttpError as e:
-            logger.warn('Unable to add video to playlist')
+            logger.warning('Unable to add video to playlist')
             print(e)
