@@ -87,6 +87,9 @@ for time_period in time_periods:
             body=dict(
                 snippet=dict(
                     title=time_period[1],
+                ),
+                status=dict(
+                    privacyStatus="public"
                 )
             )
         ).execute()['id']
