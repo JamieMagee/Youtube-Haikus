@@ -49,7 +49,13 @@ if credentials is None or credentials.invalid:
 youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
                 http=credentials.authorize(httplib2.Http()))
 
-time_periods = ['day', 'week', 'month', 'year', 'all']
+time_periods = (
+    ['day', 'Top from /r/youtubehaiku over the past day'],
+    ['week', 'Top from /r/youtubehaiku over the past week'],
+    ['month', 'Top from /r/youtubehaiku over the past month'],
+    ['year', 'Top from /r/youtubehaiku over the past year'],
+    ['all', 'Top from /r/youtubehaiku ever']
+)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -59,11 +65,11 @@ playlists = youtube.playlists().list(
 ).execute()
 
 for time_period in time_periods:
-    r = RedditYoutubeHaikus(time_period, 50)
+    r = RedditYoutubeHaikus(time_period[0], 50)
 
     try:
-        logger.info('Trying to get playlist id for %s playlist.', time_period)
-        playlist_id = [id for id in playlists['items'] if id['snippet']['title'] == time_period][0]['id']
+        logger.info('Trying to get playlist id for %s playlist.', time_period[0])
+        playlist_id = [id for id in playlists['items'] if id['snippet']['title'] == time_period[1]][0]['id']
         logger.info('Playlist exists. Deleting items.')
         playlist_items = youtube.playlistItems().list(
             part='id',
@@ -75,22 +81,19 @@ for time_period in time_periods:
                 id=playlist_item['id']
             ).execute()
     except IndexError:
-        logger.warn('Playlist does not exist. Creating new playlist.')
+        logger.warning('Playlist does not exist. Creating new playlist.')
         playlist_id = youtube.playlists().insert(
             part="snippet,status",
             body=dict(
                 snippet=dict(
-                    title=time_period,
-                ),
-                status=dict(
-                    privacyStatus="private"
+                    title=time_period[1],
                 )
             )
         ).execute()['id']
 
     for video_id, title in r.get_top():
         try:
-            logger.info('Adding video with id %s to playlist %s', video_id, time_period)
+            logger.info('Adding video with id %s to playlist %s', video_id, time_period[1])
             youtube.playlistItems().insert(
                 part='snippet,contentDetails',
                 body=dict(
