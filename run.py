@@ -1,6 +1,7 @@
 import logging
 import os
 import sys
+from time import sleep
 
 import httplib2
 from googleapiclient.discovery import build
@@ -64,54 +65,56 @@ playlists = youtube.playlists().list(
     mine=True
 ).execute()
 
-for time_period in time_periods:
-    r = RedditYoutubeHaikus(time_period[0], 50)
+while True:
+    for time_period in time_periods:
+        r = RedditYoutubeHaikus(time_period[0], 50)
 
-    try:
-        logger.info('Trying to get playlist id for %s playlist.', time_period[0])
-        playlist_id = [id for id in playlists['items'] if id['snippet']['title'] == time_period[1]][0]['id']
-        logger.info('Playlist exists. Deleting items.')
-        playlist_items = youtube.playlistItems().list(
-            part='id',
-            maxResults=50,
-            playlistId=playlist_id
-        ).execute()['items']
-        for playlist_item in playlist_items:
-            youtube.playlistItems().delete(
-                id=playlist_item['id']
-            ).execute()
-    except IndexError:
-        logger.warning('Playlist does not exist. Creating new playlist.')
-        playlist_id = youtube.playlists().insert(
-            part="snippet,status",
-            body=dict(
-                snippet=dict(
-                    title=time_period[1],
-                ),
-                status=dict(
-                    privacyStatus="public"
-                )
-            )
-        ).execute()['id']
-
-    for video_id, title in r.get_top():
         try:
-            logger.info('Adding video with id %s to playlist %s', video_id, time_period[1])
-            youtube.playlistItems().insert(
-                part='snippet,contentDetails',
+            logger.info('Trying to get playlist id for %s playlist.', time_period[0])
+            playlist_id = [id for id in playlists['items'] if id['snippet']['title'] == time_period[1]][0]['id']
+            logger.info('Playlist exists. Deleting items.')
+            playlist_items = youtube.playlistItems().list(
+                part='id',
+                maxResults=50,
+                playlistId=playlist_id
+            ).execute()['items']
+            for playlist_item in playlist_items:
+                youtube.playlistItems().delete(
+                    id=playlist_item['id']
+                ).execute()
+        except IndexError:
+            logger.warning('Playlist does not exist. Creating new playlist.')
+            playlist_id = youtube.playlists().insert(
+                part="snippet,status",
                 body=dict(
                     snippet=dict(
-                        playlistId=playlist_id,
-                        resourceId=dict(
-                            kind='youtube#video',
-                            videoId=video_id
-                        )
+                        title=time_period[1],
                     ),
-                    contentDetails=dict(
-                        note=title
+                    status=dict(
+                        privacyStatus="public"
                     )
                 )
-            ).execute()
-        except HttpError as e:
-            logger.warning('Unable to add video to playlist')
-            print(e)
+            ).execute()['id']
+
+        for video_id, title in r.get_top():
+            try:
+                logger.info('Adding video with id %s to playlist %s', video_id, time_period[1])
+                youtube.playlistItems().insert(
+                    part='snippet,contentDetails',
+                    body=dict(
+                        snippet=dict(
+                            playlistId=playlist_id,
+                            resourceId=dict(
+                                kind='youtube#video',
+                                videoId=video_id
+                            )
+                        ),
+                        contentDetails=dict(
+                            note=title
+                        )
+                    )
+                ).execute()
+            except HttpError as e:
+                logger.warning('Unable to add video to playlist')
+                print(e)
+    sleep(3600)
