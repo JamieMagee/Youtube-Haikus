@@ -51,11 +51,11 @@ youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,
                 http=credentials.authorize(httplib2.Http()))
 
 time_periods = (
-    ['day', 'Top from /r/youtubehaiku over the past day'],
-    ['week', 'Top from /r/youtubehaiku over the past week'],
-    ['month', 'Top from /r/youtubehaiku over the past month'],
-    ['year', 'Top from /r/youtubehaiku over the past year'],
-    ['all', 'Top from /r/youtubehaiku ever']
+    ['day', 'Top of the day'],
+    ['week', 'Top of the week'],
+    ['month', 'Top of the month'],
+    ['year', 'Top of the year'],
+    ['all', 'Top ever']
 )
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
