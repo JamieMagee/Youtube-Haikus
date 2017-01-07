@@ -78,10 +78,16 @@ while True:
                 maxResults=50,
                 playlistId=playlist_id
             ).execute()['items']
-            for playlist_item in playlist_items:
-                youtube.playlistItems().delete(
-                    id=playlist_item['id']
-                ).execute()
+            while len(playlist_items) != 0:
+                for playlist_item in playlist_items:
+                    youtube.playlistItems().delete(
+                        id=playlist_item['id']
+                    ).execute()
+                playlist_items = youtube.playlistItems().list(
+                    part='id',
+                    maxResults=50,
+                    playlistId=playlist_id
+                ).execute()['items']
         except IndexError:
             logger.warning('Playlist does not exist. Creating new playlist.')
             playlist_id = youtube.playlists().insert(
