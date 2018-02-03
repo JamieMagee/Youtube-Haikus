@@ -7,7 +7,7 @@
 [![Dependabot badge](https://img.shields.io/badge/Dependabot-enabled-blue.svg)](https://dependabot.com/)
 [![Known Vulnerabilities](https://snyk.io/test/github/jamiemagee/youtube-haikus/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/jamiemagee/youtube-haikus?targetFile=requirements.txt)
 
-Create YouTube playlists from posts on /r/youtubehaiku
+Create YouTube playlists from posts on [/r/youtubehaiku](https://www.reddit.com/r/youtubehaiku/)
 
 [![Screenshot of Playlists](https://i.imgur.com/zRBbZe1.jpg)](https://www.youtube.com/channel/UCe4zlSqIm2GOUzWayzUgr8g/playlists)
 
