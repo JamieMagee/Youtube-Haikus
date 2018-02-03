@@ -8,6 +8,8 @@
 
 Create YouTube playlists from posts on /r/youtubehaiku
 
+[![Screenshot of Playlists](https://i.imgur.com/zRBbZe1.jpg)](https://www.youtube.com/channel/UCe4zlSqIm2GOUzWayzUgr8g/playlists)
+
 ## Credits
 
 If you like this follow [@Jamie_Magee](https://twitter.com/Jamie_Magee) on Twitter.
