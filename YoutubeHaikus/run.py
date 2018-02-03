@@ -67,4 +67,4 @@ for time_period in time_periods:
 
         except HttpError as e:
             logger.warning('Unable to add video to playlist')
-            print(e)
+            logger.error(e)
