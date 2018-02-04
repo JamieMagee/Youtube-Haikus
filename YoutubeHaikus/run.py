@@ -24,7 +24,7 @@ creds.refresh(http)
 youtube_helper = YoutubeHelper(creds)
 
 time_periods = [
-    {'interval': 'day', 'title': 'Top of the day'},
+    #{'interval': 'day', 'title': 'Top of the day'},
     {'interval': 'week', 'title': 'Top of the week'},
     {'interval': 'month', 'title': 'Top of the month'},
     {'interval': 'year', 'title': 'Top of the year'},
