@@ -11,9 +11,9 @@ class RedditYoutubeHaikus:
 
     logger = logging.getLogger(__name__)
 
-    def __init__(self, interval, amount=50):
+    def __init__(self, interval, limit=50):
         self.interval = interval
-        self.amount = amount
+        self.amount = limit
 
     def get_top(self):
         subreddit = praw.Reddit(client_id=environ['REDDIT_CLIENT_ID'],
