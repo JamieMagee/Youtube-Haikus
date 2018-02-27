@@ -2,6 +2,6 @@
   "azureFunctions.projectRuntime": "~1",
   "azureFunctions.projectLanguage": "Python",
   "azureFunctions.templateFilter": "All",
-  "python.pythonPath": "C:\\Python36\\python.exe",
+  "python.pythonPath": "venv/bin/python",
   "editor.formatOnSave": true
 }
