@@ -31,4 +31,4 @@ class RedditYoutubeHaikus:
                     yield self.youtube_regex.search(submission.secure_media['oembed']['url']).group(1), submission.title
                 except:
                     self.logger.warning(
-                        "{} doesn't appear to be a YouTube link".format(submission.url))
+                        f"{submission.url} doesn't appear to be a YouTube link")

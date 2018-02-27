@@ -8,7 +8,6 @@ from oauth2client.client import GoogleCredentials
 from reddityoutubehaikus import RedditYoutubeHaikus
 from youtubehelper import YoutubeHelper
 
-
 creds = GoogleCredentials(
     environ['YOUTUBE_ACCESS_TOKEN'],
     environ['YOUTUBE_CLIENT_ID'],
@@ -24,7 +23,6 @@ creds.refresh(http)
 youtube_helper = YoutubeHelper(creds)
 
 time_periods = [
-    #{'interval': 'day', 'title': 'Top of the day'},
     {'interval': 'week', 'title': 'Top of the week'},
     {'interval': 'month', 'title': 'Top of the month'},
     {'interval': 'year', 'title': 'Top of the year'},
@@ -40,7 +38,7 @@ for time_period in time_periods:
 
     try:
         logger.info(
-            'Trying to get playlist id for %s playlist.', time_period['interval'])
+            f"Trying to get playlist id for {time_period['interval']} playlist.")
         playlist_id = [id for id in playlists['items']
                        if id['snippet']['title'] == time_period['title']][0]['id']
 
@@ -60,8 +58,8 @@ for time_period in time_periods:
 
     for video_id, title in r.get_top():
         try:
-            logger.info('Adding video with id %s to playlist %s',
-                        video_id, time_period['title'])
+            logger.info(
+                f"Adding video with id {video_id} to playlist {time_period['title']}")
             youtube_helper.add_item_to_playlist(
                 playlist_id, video_id, title)
 
