@@ -28,7 +28,6 @@ time_periods = [
     {'interval': 'year', 'title': 'Top of the year'},
     {'interval': 'all', 'title': 'Top ever'}
 ]
-logging.basicConfig(filename='haikus.log', filemode='w', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 playlists = youtube_helper.playlists()
