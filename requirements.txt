@@ -6,7 +6,7 @@ praw==6.0.0
 pyasn1==0.4.4
 pyasn1-modules==0.2.2
 requests==2.19.1
-rsa==3.4.2
+rsa==4.0
 simplejson==3.16.0
 six==1.11.0
 update-checker==0.16
