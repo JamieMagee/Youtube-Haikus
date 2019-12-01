@@ -7,7 +7,7 @@ pyasn1==0.4.7
 pyasn1-modules==0.2.7
 requests==2.22.0
 rsa==4.0
-simplejson==3.16.0
+simplejson==3.17.0
 six==1.12.0
 update-checker==0.16
 uritemplate==3.0.0
