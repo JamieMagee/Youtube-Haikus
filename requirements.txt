@@ -1,4 +1,4 @@
-decorator==4.4.0
+decorator==4.4.1
 google-api-python-client==1.7.11
 httplib2==0.14.0
 oauth2client==4.1.3
