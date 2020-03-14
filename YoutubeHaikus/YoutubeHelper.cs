@@ -18,14 +18,11 @@ namespace YoutubeHaikus
 {
     public class YoutubeHelper
     {
-        
         private readonly Lazy<Task<YouTubeService>> _youtubeService;
-
-        private readonly ILogger _logger;
-        
+        private readonly ILogger<YoutubeHelper> _logger;
         public static readonly Regex YoutubeRegex = new Regex("(?:youtube\\.com\\/(?:[^\\/]+\\/.+\\/|(?:v|e(?:mbed)?)\\/|.*[?&]v=)|youtu\\.be\\/)([^\"&?\\/ ]{11})");
 
-        public YoutubeHelper(ILogger logger)
+        public YoutubeHelper(ILogger<YoutubeHelper> logger)
         {
             _logger = logger;
             _youtubeService = new Lazy<Task<YouTubeService>>(async () =>
@@ -105,7 +102,7 @@ namespace YoutubeHaikus
                 }
                 catch (GoogleApiException e)
                 {
-                    _logger.LogWarning($"Could not delete {playlistItem.Snippet.Title} from playlist with ID {playlistId}");
+                    _logger.LogWarning($"Could not delete {playlistItem.Snippet.Title} from playlist with ID {playlistId}", e);
                 }
             }
         }

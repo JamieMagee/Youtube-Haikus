@@ -18,9 +18,9 @@ namespace YoutubeHaikus
 
         private readonly YoutubeHelper _youtubeHelper;
         private readonly RedditHelper _redditHelper;
-        private readonly ILogger _logger;
+        private readonly ILogger<YoutubeHaikus> _logger;
 
-        public YoutubeHaikus(YoutubeHelper youtubeHelper, RedditHelper redditHelper, ILogger logger)
+        public YoutubeHaikus(YoutubeHelper youtubeHelper, RedditHelper redditHelper, ILogger<YoutubeHaikus> logger)
         {
             _youtubeHelper = youtubeHelper;
             _redditHelper = redditHelper;
@@ -30,7 +30,6 @@ namespace YoutubeHaikus
         [FunctionName("YoutubeHaikus")]
         public async Task Run([TimerTrigger("0 0 */12 * * *")] TimerInfo myTimer)
         {
-            
             foreach (var playlistTitleTuple in PlaylistTitleInterval)
             {
                 var playlist = await _youtubeHelper.GetPlaylistAsync(playlistTitleTuple.Value);

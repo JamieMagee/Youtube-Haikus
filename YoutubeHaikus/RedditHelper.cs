@@ -10,10 +10,9 @@ namespace YoutubeHaikus
     public class RedditHelper
     {
         private readonly RedditClient _redditClient;
-        
-        private readonly ILogger _logger;
+        private readonly ILogger<RedditHelper> _logger;
 
-        public RedditHelper(ILogger logger)
+        public RedditHelper(ILogger<RedditHelper> logger)
         {
             _logger = logger;
             _redditClient = new RedditClient(
