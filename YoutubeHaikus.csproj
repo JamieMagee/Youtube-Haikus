@@ -13,6 +13,9 @@
     <PackageReference Include="Reddit" Version="1.4.0" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="azuredeploy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -52,7 +52,7 @@ jobs:
           inlineScript: |
             az group create -n ${{ env.FUNC_APP_NAME }} -l eastus
             az deployment group create -g ${{ env.FUNC_APP_NAME }} \
-              --template-file azuredeploy.json \
+              --template-file $GITHUB_WORKSPACE/.output/azuredeploy.json \
               --parameters appName=youtubehaiku \
                 youtubeClientId="${{ secrets.YOUTUBE_CLIENT_ID }}" \
                 youtubeClientSecret="${{ secrets.YOUTUBE_CLIENT_SECRET }}" \
