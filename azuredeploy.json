@@ -164,7 +164,7 @@
               "value": "[parameters('redditClientSecret')]"
             },
             {
-              "name": "REDDIT_REFRESH_TPKEN",
+              "name": "REDDIT_REFRESH_TOKEN",
               "value": "[parameters('redditRefreshToken')]"
             }
           ]
