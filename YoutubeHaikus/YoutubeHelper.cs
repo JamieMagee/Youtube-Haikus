@@ -75,7 +75,7 @@ namespace YoutubeHaikus
 
             while (nextPageToken != null)
             {
-                var playlistItemsListRequest = service.PlaylistItems.List("id,snippet");
+                var playlistItemsListRequest = service.PlaylistItems.List("id");
                 playlistItemsListRequest.PlaylistId = playlistId;
                 playlistItemsListRequest.MaxResults = 50;
                 playlistItemsListRequest.PageToken = nextPageToken;
@@ -102,7 +102,7 @@ namespace YoutubeHaikus
                 }
                 catch (GoogleApiException e)
                 {
-                    _logger.LogWarning($"Could not delete {playlistItem.Snippet.Title} from playlist with ID {playlistId}", e);
+                    _logger.LogWarning($"Could not delete {playlistItem.Id} from playlist with ID {playlistId}", e);
                 }
             }
         }
@@ -120,14 +120,10 @@ namespace YoutubeHaikus
                         Kind = "youtube#video",
                         VideoId = YoutubeRegex.Match(post.Listing.URL).Groups[1].Value
                     }
-                },
-                ContentDetails = new PlaylistItemContentDetails
-                {
-                    Note = post.Title
                 }
             }))
             {
-                await service.PlaylistItems.Insert(newPlaylistItem, "snippet,contentDetails")
+                await service.PlaylistItems.Insert(newPlaylistItem, "snippet")
                     .ExecuteAsync();
             }
         }
