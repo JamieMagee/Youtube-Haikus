@@ -50,79 +50,54 @@ namespace YoutubeHaikus
             });
         }
         
-        public async Task<Playlist> GetPlaylistAsync(string playlistTitle)
+        public async Task<Playlist> RecreatePlaylistAsync(string playlistTitle)
         {
             var service = await _youtubeService.Value;
 
-            var playlistRequest = service.Playlists.List("snippet");
-            playlistRequest.Mine = true;
+            var playlistListRequest = service.Playlists.List("snippet");
+            playlistListRequest.Mine = true;
+            var playlistResponse = await playlistListRequest.ExecuteAsync();
 
-            var playlistResponse = await playlistRequest.ExecuteAsync();
+            var playlist = playlistResponse.Items.First(p => p.Snippet.Title == playlistTitle);
+            await service.Playlists.Delete(playlist.Id).ExecuteAsync();
 
-            return playlistResponse.Items.First(p => p.Snippet.Title == playlistTitle);
-        }
-
-        public async Task<bool> IsPlaylistEmptyAsync(string playlistId)
-        {
-            var playlistItems = GetPlaylistItemsAsync(playlistId);
-            return await playlistItems.GetAsyncEnumerator().MoveNextAsync() == false;
-        }
-
-        private async IAsyncEnumerable<PlaylistItem> GetPlaylistItemsAsync(string playlistId)
-        {
-            var service = await _youtubeService.Value;
-            var nextPageToken = "";
-
-            while (nextPageToken != null)
+            return await service.Playlists.Insert(new Playlist
             {
-                var playlistItemsListRequest = service.PlaylistItems.List("id");
-                playlistItemsListRequest.PlaylistId = playlistId;
-                playlistItemsListRequest.MaxResults = 50;
-                playlistItemsListRequest.PageToken = nextPageToken;
-
-                var userPlaylistItemListResponse = await playlistItemsListRequest.ExecuteAsync();
-
-                foreach (var playlistItem in userPlaylistItemListResponse.Items)
+                Snippet = new PlaylistSnippet
                 {
-                    yield return playlistItem;
-                }
-
-                nextPageToken = userPlaylistItemListResponse.NextPageToken;
-            }
-        }
-
-        public async Task DeletePlaylistItemsAsync(string playlistId)
-        {
-            var service = await _youtubeService.Value;
-            await foreach (var playlistItem in GetPlaylistItemsAsync(playlistId))
-            {
-                try
+                    Title = playlistTitle
+                },
+                Status = new PlaylistStatus
                 {
-                    await service.PlaylistItems.Delete(playlistItem.Id).ExecuteAsync();
+                    PrivacyStatus = "public"
                 }
-                catch (GoogleApiException e)
-                {
-                    _logger.LogWarning($"Could not delete {playlistItem.Id} from playlist with ID {playlistId}", e);
-                }
-            }
+            }, "snippet,status").ExecuteAsync();
         }
 
         public async Task AddPlaylistItemsAsync(string playlistId, List<LinkPost> posts)
         {
             var service = await _youtubeService.Value;
-            foreach (var newPlaylistItem in posts.Select(post => new PlaylistItem
+
+            var videoIds = string.Join(',', posts.Select(p => YoutubeRegex.Match(p.Listing.URL).Groups[1].Value));
+            var videoRequest = service.Videos.List("id");
+            videoRequest.Id = videoIds;
+            var videoResponse = await videoRequest.ExecuteAsync();
+            
+            foreach (var post in videoResponse.Items)
             {
-                Snippet = new PlaylistItemSnippet
+                var newPlaylistItem = new PlaylistItem
                 {
-                    PlaylistId = playlistId,
-                    ResourceId = new ResourceId
+                    Snippet = new PlaylistItemSnippet
                     {
-                        Kind = "youtube#video",
-                        VideoId = YoutubeRegex.Match(post.Listing.URL).Groups[1].Value
+                        PlaylistId = playlistId,
+                        ResourceId = new ResourceId
+                        {
+                            Kind = "youtube#video",
+                            VideoId = post.Id
+                        }
                     }
-                }
-            }))
-            {
+                };
+                
                 await service.PlaylistItems.Insert(newPlaylistItem, "snippet")
                     .ExecuteAsync();
             }

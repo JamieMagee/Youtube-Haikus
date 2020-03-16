@@ -28,16 +28,12 @@ namespace YoutubeHaikus
         }
         
         [FunctionName("YoutubeHaikus")]
-        public async Task Run([TimerTrigger("0 0 */12 * * *")] TimerInfo myTimer)
+        public async Task Run([TimerTrigger("0 0 0 * * *")] TimerInfo myTimer)
         {
             foreach (var playlistTitleTuple in PlaylistTitleInterval)
             {
-                var playlist = await _youtubeHelper.GetPlaylistAsync(playlistTitleTuple.Value);
+                var playlist = await _youtubeHelper.RecreatePlaylistAsync(playlistTitleTuple.Value);
                 var posts = _redditHelper.GetTop(playlistTitleTuple.Key);
-                while (!await _youtubeHelper.IsPlaylistEmptyAsync(playlist.Id))
-                {
-                    await _youtubeHelper.DeletePlaylistItemsAsync(playlist.Id);
-                }
                 await _youtubeHelper.AddPlaylistItemsAsync(playlist.Id, posts);
             }
         }
