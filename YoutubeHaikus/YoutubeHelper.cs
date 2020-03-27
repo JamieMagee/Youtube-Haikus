@@ -58,8 +58,11 @@ namespace YoutubeHaikus
             playlistListRequest.Mine = true;
             var playlistResponse = await playlistListRequest.ExecuteAsync();
 
-            var playlist = playlistResponse.Items.First(p => p.Snippet.Title == playlistTitle);
-            await service.Playlists.Delete(playlist.Id).ExecuteAsync();
+            var playlist = playlistResponse.Items.FirstOrDefault(p => p.Snippet.Title == playlistTitle);
+            if (playlist != null)
+            {
+                await service.Playlists.Delete(playlist.Id).ExecuteAsync();
+            }
 
             return await service.Playlists.Insert(new Playlist
             {
