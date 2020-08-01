@@ -9,7 +9,7 @@
     <PackageReference Include="Google.Apis.Oauth2.v2" Version="1.44.1.1869" />
     <PackageReference Include="Google.Apis.YouTube.v3" Version="1.44.1.1869" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.7" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
     <PackageReference Include="Reddit" Version="1.4.0" />
   </ItemGroup>
   <ItemGroup>
