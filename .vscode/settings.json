@@ -1,9 +1,0 @@
-{
-  "azureFunctions.projectRuntime": "~3",
-  "azureFunctions.projectLanguage": "C#",
-  "azureFunctions.templateFilter": "All",
-  "editor.formatOnSave": true,
-  "azureFunctions.deploySubpath": "bin/Release/netcoreapp3.1/publish",
-  "debug.internalConsoleOptions": "neverOpen",
-  "azureFunctions.preDeployTask": "publish"
-}
