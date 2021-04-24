@@ -2046,14 +2046,14 @@ gas-entry-generator@2.1.0:
     esprima "4.0.1"
     estraverse "5.2.0"
 
-gas-webpack-plugin@1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-1.2.2.tgz#c570ebffe97e787143d1fac17dc1c5541a95632d"
-  integrity sha512-rnsNSukVhkQE5uW+pNRZgSqpjNjChvIpVr6S1T5N9yIpQEDi1VaKaIW1rVyIGC8RsUQHQQanBm4QBjJ/TsCtHg==
+gas-webpack-plugin@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.0.1.tgz#dc6da6b3d36410934d6d3f47de7a7419027fe63a"
+  integrity sha512-Z3Oo1E3DWz+E2AQmaAVG/QFrVvjrjSgi/KP7X5MczO/LlhR4cRiliaC2fo905j2x+NwjTdV1vN0EuiiwbSwwew==
   dependencies:
     gas-entry-generator "2.1.0"
     minimatch "^3.0.4"
-    webpack-sources "^1.4.3"
+    webpack-sources "^2.2.0"
 
 gaxios@^2.0.1, gaxios@^2.1.0:
   version "2.3.4"
@@ -4241,7 +4241,7 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-source-list-map@^2.0.0:
+source-list-map@^2.0.0, source-list-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
   integrity sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==
@@ -4873,6 +4873,14 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
+
+webpack-sources@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.2.0.tgz#058926f39e3d443193b6c31547229806ffd02bac"
+  integrity sha512-bQsA24JLwcnWGArOKUxYKhX3Mz/nK1Xf6hxullKERyktjNMC4x8koOeaDNTA2fEJ09BdWLbM/iTW0ithREUP0w==
+  dependencies:
+    source-list-map "^2.0.1"
+    source-map "^0.6.1"
 
 webpack@4.46.0:
   version "4.46.0"
