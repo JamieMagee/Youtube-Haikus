@@ -5,8 +5,7 @@ module.exports = {
   },
   extends: [
     'google',
-    'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

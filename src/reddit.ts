@@ -20,9 +20,9 @@ export class Reddit {
         password: props.redditPassword,
       },
       headers: {
-        authorization: `Basic ${Buffer.from(
+        authorization: `Basic ${Utilities.base64Encode(
           `${props.redditClientId}:${props.redditClientSecret}`
-        ).toString('base64')}`,
+        )}`,
         'user-agent': 'YoutubeHaikus',
       },
     };
