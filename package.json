@@ -11,7 +11,7 @@
     "push": "clasp push"
   },
   "devDependencies": {
-    "@google/clasp": "2.3.2",
+    "@google/clasp": "2.4.0",
     "@tsconfig/recommended": "1.0.1",
     "@types/google-apps-script": "1.0.34",
     "@types/node": "14.17.4",
