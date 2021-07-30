@@ -1519,14 +1519,14 @@ gas-entry-generator@2.1.0:
     esprima "4.0.1"
     estraverse "5.2.0"
 
-gas-webpack-plugin@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.0.2.tgz#68d4ea539902945198d70ffc736a3513be541ecc"
-  integrity sha512-Qi1+FW+9D0FpFSwUONpWcd7dL6yBB4g+iiLEus4SPU3bY6hDH9DcZ0hESln0nFAJQgP5VLmYtxzVRsFVYRaQ7A==
+gas-webpack-plugin@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.1.0.tgz#ce4a818a6e53cf2ed2703b722b6fb61299fb36a2"
+  integrity sha512-gTPDjqJHnviiv2vJu1hpNKln6CyEjnPjphC40S6XvSPkcmrHQl2kcPQHevWirAmCcEoF6FDFNhmUQToqVcimBw==
   dependencies:
     gas-entry-generator "2.1.0"
     minimatch "^3.0.4"
-    webpack-sources "^2.2.0"
+    webpack-sources "^3.1.1"
 
 gaxios@^4.0.0:
   version "4.3.0"
@@ -3122,11 +3122,6 @@ slice-ansi@^4.0.0:
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
 
-source-list-map@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
-  integrity sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==
-
 source-map-support@^0.5.17, source-map-support@~0.5.19:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
@@ -3517,14 +3512,6 @@ webpack-merge@^5.7.3:
   dependencies:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
-
-webpack-sources@^2.2.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.3.1.tgz#570de0af163949fe272233c2cefe1b56f74511fd"
-  integrity sha512-y9EI9AO42JjEcrTJFOYmVywVZdKVUfOvDUPsJea5GIr1JOEGFVqwlY2K098fFoIjOkDzHn2AjRvM8dsBZu+gCA==
-  dependencies:
-    source-list-map "^2.0.1"
-    source-map "^0.6.1"
 
 webpack-sources@^3.1.1:
   version "3.1.1"
