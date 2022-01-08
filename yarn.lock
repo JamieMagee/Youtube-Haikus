@@ -209,10 +209,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/google-apps-script@1.0.42":
-  version "1.0.42"
-  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-1.0.42.tgz#2dad15b81b46042d6f6401d134942d547c13aa82"
-  integrity sha512-ypG0Lpt5PYNez0ib0geyUKcP7fT9eNJm/28RifqcQWa7JZ4OnZ2GUbAeyw5EdT7kAi3fqDiA1cWV46jMigKFpg==
+"@types/google-apps-script@1.0.43":
+  version "1.0.43"
+  resolved "https://registry.yarnpkg.com/@types/google-apps-script/-/google-apps-script-1.0.43.tgz#15209632ed9b095110a47ec3441f1d60479ff979"
+  integrity sha512-eribgnqAo+BNS+Wx/bDxBBfrezCsAEB/AT3Sc/EgxnIwCeelUjWLiAJrXmqDy+vbF7wVLl300KQU69XhahcxmA==
 
 "@types/http-cache-semantics@*":
   version "4.0.1"
