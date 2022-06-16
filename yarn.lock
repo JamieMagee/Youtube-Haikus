@@ -1615,10 +1615,10 @@ gas-entry-generator@2.1.0:
     esprima "4.0.1"
     estraverse "5.2.0"
 
-gas-webpack-plugin@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.2.1.tgz#b4cdf4bffbac87bb903a1ffabd9e432b6272ffd8"
-  integrity sha512-7ORyxdv0UYT7YtM+cQ1xZQyiRCxzSkferGXCSfcVsU2IdAjgJq2gCLOPiWiH/awItcJma/jnCMiTYCFvA0UElA==
+gas-webpack-plugin@2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.2.2.tgz#87379e5fc9ebedbc896a45d67c423632207dea64"
+  integrity sha512-wHnLIZ52j860hgXUNk6Dj5vZ4RGAjYN8Sr8c92W8ct947yhXC1ipZdEsODLOuVYmeMuWSyYt1hPK4zEoIrV6kQ==
   dependencies:
     gas-entry-generator "2.1.0"
     minimatch "^5.0.0"
