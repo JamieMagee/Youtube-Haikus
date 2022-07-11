@@ -13,7 +13,7 @@
   "devDependencies": {
     "@google/clasp": "2.4.1",
     "@tsconfig/recommended": "1.0.1",
-    "@types/google-apps-script": "1.0.51",
+    "@types/google-apps-script": "1.0.52",
     "@types/node": "14.18.21",
     "@typescript-eslint/eslint-plugin": "5.30.6",
     "@typescript-eslint/parser": "5.30.6",
