@@ -14,7 +14,7 @@
     "@google/clasp": "2.4.1",
     "@tsconfig/recommended": "1.0.1",
     "@types/google-apps-script": "1.0.55",
-    "@types/node": "14.18.28",
+    "@types/node": "14.18.29",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
     "clean-webpack-plugin": "4.0.0",
