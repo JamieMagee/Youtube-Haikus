@@ -1727,22 +1727,22 @@ fuzzy@^0.1.3:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha512-/gZffu4ykarLrCiP3Ygsa86UAo1E5vEVlvTrpkKywXSbP9Xhln3oSp9QSV57gEq3JFFpGJ4GZ+5zdEp3FcUh4w==
 
-gas-entry-generator@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gas-entry-generator/-/gas-entry-generator-2.2.0.tgz#14eb6c0e93745e4d30a0813826b3184c1b0c56e6"
-  integrity sha512-4xKGmL9PbocIP6vrk9rUqO3XzehJmnnCkQHF8UeLlGDLvmzt2TlZk4YqUDLTmq/3XJk34en3KOLKJj4btzhTMQ==
+gas-entry-generator@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gas-entry-generator/-/gas-entry-generator-2.3.0.tgz#6770a8b237c3f29fac0212e86c6f0b3e4961a5af"
+  integrity sha512-JPR1UUfL2psy/XWDBQk503RgYhMgYOInB5/zA2A4aSY/BWVH58asF1lygvA3/A164A67EY7a2fZXl1gotFP/Gw==
   dependencies:
     escodegen "2.0.0"
     esprima-next "^5.8.3"
     estraverse "5.3.0"
 
-gas-webpack-plugin@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.3.0.tgz#4c83dfae83902fd12b91e9eaf91021a7b10bf6ab"
-  integrity sha512-TPJ2Xfaewetvg3lVGiE9Pk62/ZNF3WIxloasOsEnJSs1A++K5hBKNBvvhpX+221XP8/NvPsz+0K2CGDEeJvebQ==
+gas-webpack-plugin@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.4.0.tgz#f3409af19d158306011731256f5f42d581b169aa"
+  integrity sha512-/Si6e8tZNy7myeWydBz4RM4sVcQctWIaWUEMc96DAjNOHM8UB5oH7kmbv29ZmwSFj77Now4wcfyQ5icQfwHjrg==
   dependencies:
-    gas-entry-generator "2.2.0"
-    minimatch "^5.0.0"
+    gas-entry-generator "2.3.0"
+    minimatch "^7.4.2"
     slash "^3.0.0"
     webpack-sources "^3.1.1"
 
@@ -2672,10 +2672,10 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^5.0.0:
-  version "5.1.6"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.6.tgz#1cfcb8cf5522ea69952cd2af95ae09477f122a96"
-  integrity sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==
+minimatch@^7.4.2:
+  version "7.4.6"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-7.4.6.tgz#845d6f254d8f4a5e4fd6baf44d5f10c8448365fb"
+  integrity sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==
   dependencies:
     brace-expansion "^2.0.1"
 
