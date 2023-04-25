@@ -1735,21 +1735,21 @@ fuzzy@^0.1.3:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha512-/gZffu4ykarLrCiP3Ygsa86UAo1E5vEVlvTrpkKywXSbP9Xhln3oSp9QSV57gEq3JFFpGJ4GZ+5zdEp3FcUh4w==
 
-gas-entry-generator@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gas-entry-generator/-/gas-entry-generator-2.3.0.tgz#6770a8b237c3f29fac0212e86c6f0b3e4961a5af"
-  integrity sha512-JPR1UUfL2psy/XWDBQk503RgYhMgYOInB5/zA2A4aSY/BWVH58asF1lygvA3/A164A67EY7a2fZXl1gotFP/Gw==
+gas-entry-generator@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/gas-entry-generator/-/gas-entry-generator-2.5.1.tgz#538f156b5f6612422bd72a6fe0996be0f6733ab4"
+  integrity sha512-grd9Qvbm8AgyoDlUCKsbLpPVBFQm+Giv/7xmcINLSQfCELIxg6Cb/C2bOYfqZFjWhsGYwU2ZrWy3mt2XtWjHKA==
   dependencies:
     escodegen "2.0.0"
     esprima-next "^5.8.3"
     estraverse "5.3.0"
 
-gas-webpack-plugin@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.4.0.tgz#f3409af19d158306011731256f5f42d581b169aa"
-  integrity sha512-/Si6e8tZNy7myeWydBz4RM4sVcQctWIaWUEMc96DAjNOHM8UB5oH7kmbv29ZmwSFj77Now4wcfyQ5icQfwHjrg==
+gas-webpack-plugin@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/gas-webpack-plugin/-/gas-webpack-plugin-2.5.0.tgz#0b8f51c9bc30ea2e7123ce5d6d2dde5e557419e5"
+  integrity sha512-qk5lOacJYY9Hqa2X/VTys+MfsYZawraGbmQRyQ34qak8BN/kHBxXt2Bav+sJ+Bf4bYRZc/Z7gKrNiAr1OWGmAA==
   dependencies:
-    gas-entry-generator "2.3.0"
+    gas-entry-generator "2.5.1"
     minimatch "^7.4.2"
     slash "^3.0.0"
     webpack-sources "^3.1.1"
