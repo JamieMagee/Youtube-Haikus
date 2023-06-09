@@ -1395,10 +1395,10 @@ eslint-loader@4.0.2:
     object-hash "^2.0.3"
     schema-utils "^2.6.5"
 
-eslint-plugin-googleappsscript@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-googleappsscript/-/eslint-plugin-googleappsscript-1.0.4.tgz#ba995b237cdec18bd72402a8c9023675d2a70510"
-  integrity sha512-Z6w1EMw0z0VOUvI0PFquigNSkYTgB+pVb2O2KYedDHnllwrgjjNBOLxsqPmtwmjOtFqCu7TuL0hJQwxVnp5OzQ==
+eslint-plugin-googleappsscript@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-googleappsscript/-/eslint-plugin-googleappsscript-1.0.5.tgz#81ce3f869036780c6d7fe8229f526b8673c8aa47"
+  integrity sha512-pzGdRAoGzjefsGs1ct1MSip9RbBn24xJd/CxD2bszDU3HkuFYenAg/tpTGQQSb2hYMre0uL/H3IIGhN4qSnQTA==
   dependencies:
     requireindex "~1.1.0"
 
