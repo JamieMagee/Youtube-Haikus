@@ -2,13 +2,9 @@
   "name": "youtube-haikus",
   "version": "1.0.0",
   "description": "Create YouTube playlists with the top videos from /r/youtubehaiku",
-  "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=8.0.0"
-  },
   "scripts": {
-    "check": "biome check ./src",
     "build": "node esbuild.mjs",
+    "lint": "biome check ./src",
     "login": "clasp login",
     "push": "clasp push"
   },
