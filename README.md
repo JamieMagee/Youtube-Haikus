@@ -1,6 +1,6 @@
 # Youtube-Haikus
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/JamieMagee/Youtube-Haikus/Build%20and%20Deploy?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/JamieMagee/Youtube-Haikus/build.yml?branch=master&style=for-the-badge)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 Create YouTube playlists from posts on [/r/youtubehaiku](https://www.reddit.com/r/youtubehaiku/)
