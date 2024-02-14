@@ -15,21 +15,21 @@ export class Youtube {
     );
 
     if (playlist === undefined) {
-      playlist = this.createPlaylist();
+      playlist = this.#createPlaylist();
     } else {
-      playlist = this.recreatePlaylist(playlist.id);
+      playlist = this.#recreatePlaylist(playlist.id);
     }
 
-    videos.forEach((video) => {
+    for (const video of videos) {
       try {
-        this.addVideoToPlaylist(playlist.id, video);
+        this.#addVideoToPlaylist(playlist.id, video);
       } catch (e) {
         Logger.log(e);
       }
-    });
+    }
   }
 
-  private createPlaylist(): GoogleAppsScript.YouTube.Schema.Playlist {
+  #createPlaylist(): GoogleAppsScript.YouTube.Schema.Playlist {
     return YouTube.Playlists.insert(
       {
         snippet: {
@@ -43,14 +43,14 @@ export class Youtube {
     );
   }
 
-  private recreatePlaylist(
+  #recreatePlaylist(
     playlistId: string
   ): GoogleAppsScript.YouTube.Schema.Playlist {
     YouTube.Playlists.remove(playlistId);
-    return this.createPlaylist();
+    return this.#createPlaylist();
   }
 
-  private addVideoToPlaylist(playlistId: string, video: string): void {
+  #addVideoToPlaylist(playlistId: string, video: string): void {
     YouTube.PlaylistItems.insert(
       {
         snippet: {

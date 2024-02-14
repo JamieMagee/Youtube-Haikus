@@ -3,12 +3,12 @@ import { intervals } from './types';
 import { Youtube } from './youtube';
 
 declare const global: {
-  [x: string]: any;
+  haikus: () => void;
 };
 
-global.haikus = (): void => {
-  intervals.forEach((interval) => {
+global['haikus'] = (): void => {
+  for (const interval of intervals) {
     const videos = new Reddit().getTop(interval);
     new Youtube(interval).doHaikus(videos);
-  });
+  }
 };

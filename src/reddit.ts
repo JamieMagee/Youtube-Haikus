@@ -3,17 +3,16 @@ import { Interval } from './types';
 
 export class Reddit {
   readonly token: string;
-  readonly youtubeRegex = new RegExp(
-    '(?:youtube\\.com\\/(?:[^\\/]+\\/.+\\/|(?:v|e(?:mbed)?)\\/|.*[?&]v=)|youtu\\.be\\/)([^"&?\\/ ]{11})'
-  );
+  readonly youtubeRegex =
+    /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/;
   readonly limit;
 
-  constructor(limit: number = 50) {
+  constructor(limit = 50) {
     this.limit = limit;
     const props = new Properties();
 
     const options = {
-      method: 'post' as HttpMethod,
+      method: 'post' as const,
       payload: {
         grant_type: 'password',
         username: props.redditUsername,
@@ -55,7 +54,6 @@ export class Reddit {
   }
 }
 
-type HttpMethod = 'get' | 'delete' | 'patch' | 'post' | 'put';
 interface Listing {
   data: {
     children: {
