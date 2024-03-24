@@ -12,8 +12,8 @@ devDependencies:
     specifier: 2.4.2
     version: 2.4.2
   '@tsconfig/recommended':
-    specifier: 1.0.3
-    version: 1.0.3
+    specifier: 1.0.4
+    version: 1.0.4
   '@tsconfig/strictest':
     specifier: 2.0.3
     version: 2.0.3
@@ -610,8 +610,8 @@ packages:
       defer-to-connect: 2.0.1
     dev: true
 
-  /@tsconfig/recommended@1.0.3:
-    resolution: {integrity: sha512-+jby/Guq9H8O7NWgCv6X8VAiQE8Dr/nccsCtL74xyHKhu2Knu5EAKmOZj3nLCnLm1KooUzKY+5DsnGVqhM8/wQ==}
+  /@tsconfig/recommended@1.0.4:
+    resolution: {integrity: sha512-7RfsHlJYsqASGpV7R7zJ72baBBoqvbTj9dD4SHYSeLSMkMjSUhi15SZQK/7GQPCAmOhEoEC87HneaXihVXF6YA==}
     dev: true
 
   /@tsconfig/strictest@2.0.3:
