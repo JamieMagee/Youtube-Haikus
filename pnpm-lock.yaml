@@ -15,8 +15,8 @@ devDependencies:
     specifier: 1.0.4
     version: 1.0.4
   '@tsconfig/strictest':
-    specifier: 2.0.3
-    version: 2.0.3
+    specifier: 2.0.4
+    version: 2.0.4
   '@types/google-apps-script':
     specifier: 1.0.82
     version: 1.0.82
@@ -614,8 +614,8 @@ packages:
     resolution: {integrity: sha512-7RfsHlJYsqASGpV7R7zJ72baBBoqvbTj9dD4SHYSeLSMkMjSUhi15SZQK/7GQPCAmOhEoEC87HneaXihVXF6YA==}
     dev: true
 
-  /@tsconfig/strictest@2.0.3:
-    resolution: {integrity: sha512-MroLvRhMbqtXI5WBSwoomro6OQS4xnCoudUrMb20JO0vLKUs0bAaCEcvM/immEBSJjFAK1l6jW1oAO8q3Ancrg==}
+  /@tsconfig/strictest@2.0.4:
+    resolution: {integrity: sha512-/VKO/oufDOvAE48KGzZOEXFBKtR3PnGlb4cJoRtw3Ax5tYwaWnaNgyTJDviIbvjlnn82WMfTNvhegFkj5Xt2UA==}
     dev: true
 
   /@types/cacheable-request@6.0.3:
