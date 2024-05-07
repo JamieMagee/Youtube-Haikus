@@ -14,7 +14,7 @@
     "@tsconfig/recommended": "1.0.6",
     "@tsconfig/strictest": "2.0.5",
     "@types/google-apps-script": "1.0.83",
-    "esbuild": "0.21.0",
+    "esbuild": "0.21.1",
     "esbuild-gas-plugin": "0.8.0",
     "typescript": "5.4.5"
   }
