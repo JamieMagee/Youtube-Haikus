@@ -1367,7 +1367,7 @@ packages:
       extend: 3.0.2
       gaxios: 4.3.3
       google-auth-library: 7.14.1
-      qs: 6.13.0
+      qs: 6.13.1
       url-template: 2.0.8
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -2020,8 +2020,8 @@ packages:
       once: 1.4.0
     dev: true
 
-  /qs@6.13.0:
-    resolution: {integrity: sha512-+38qI9SOr8tfZ4QmJNplMUxqjbe7LKvvZgWdExBOmd+egZTtjLB67Gu0HRX3u/XOq7UU2Nx6nsjvS16Z9uwfpg==}
+  /qs@6.13.1:
+    resolution: {integrity: sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg==}
     engines: {node: '>=0.6'}
     dependencies:
       side-channel: 1.0.6
