@@ -18,8 +18,8 @@ devDependencies:
     specifier: 2.0.5
     version: 2.0.5
   '@types/google-apps-script':
-    specifier: 1.0.93
-    version: 1.0.93
+    specifier: 1.0.94
+    version: 1.0.94
   esbuild:
     specifier: 0.25.0
     version: 0.25.0
@@ -638,8 +638,8 @@ packages:
       '@types/responselike': 1.0.3
     dev: true
 
-  /@types/google-apps-script@1.0.93:
-    resolution: {integrity: sha512-Cpv6lgkmKM89IXGqVq0Sz5VN5bsMbKusgi+VFzHcg0AXl1qwg4kDlULAiAZ2tMJ3CUIvV++Ffw1bDPdser8IDw==}
+  /@types/google-apps-script@1.0.94:
+    resolution: {integrity: sha512-Tu3F6BNbhC8EyNXpN+8J38YQx4wGN/iSunC32r00UC/gF/EGdCDbwPFnlvMkDi87Nj/tqjeeYWOyAYORFWcWTA==}
     dev: true
 
   /@types/http-cache-semantics@4.0.4:
