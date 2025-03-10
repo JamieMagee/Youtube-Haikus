@@ -24,8 +24,8 @@ devDependencies:
     specifier: 0.25.1
     version: 0.25.1
   esbuild-gas-plugin:
-    specifier: 0.8.0
-    version: 0.8.0
+    specifier: 0.9.0
+    version: 0.9.0
   typescript:
     specifier: 5.8.2
     version: 5.8.2
@@ -134,15 +134,15 @@ packages:
     dev: true
     optional: true
 
-  /@deno/shim-deno-test@0.4.0:
-    resolution: {integrity: sha512-oYWcD7CpERZy/TXMTM9Tgh1HD/POHlbY9WpzmAk+5H8DohcxG415Qws8yLGlim3EaKBT2v3lJv01x4G0BosnaQ==}
+  /@deno/shim-deno-test@0.5.0:
+    resolution: {integrity: sha512-4nMhecpGlPi0cSzT67L+Tm+GOJqvuk8gqHBziqcUQOarnuIax1z96/gJHCSIz2Z0zhxE6Rzwb3IZXPtFh51j+w==}
     dev: true
 
-  /@deno/shim-deno@0.16.1:
-    resolution: {integrity: sha512-s9v0kzF5bm/o9TgdwvsraHx6QNllYrXXmKzgOG2lh4LFXnVMr2gpjK/c/ve6EflQn1MqImcWmVD8HAv5ahuuZQ==}
+  /@deno/shim-deno@0.17.0:
+    resolution: {integrity: sha512-+FzsP65eehAgTQdzt1izLEV17ePCZqHxDQqRDbpRc1yJVYtDI2MvbRq5DvOj90uRt6zKn9qtWpEueDqG1QORhQ==}
     dependencies:
-      '@deno/shim-deno-test': 0.4.0
-      which: 2.0.2
+      '@deno/shim-deno-test': 0.5.0
+      which: 4.0.0
     dev: true
 
   /@esbuild/aix-ppc64@0.25.1:
@@ -1103,10 +1103,10 @@ packages:
       es-errors: 1.3.0
     dev: true
 
-  /esbuild-gas-plugin@0.8.0:
-    resolution: {integrity: sha512-KxfeVm6ZjcvTTeIzmsNrIaXvIjT/JEZlYKCJ2Nlr9eDW0Dp366rNS5e5qNyn9dXAx1sLKvYd3mEbSh5JkfV5dQ==}
+  /esbuild-gas-plugin@0.9.0:
+    resolution: {integrity: sha512-hPdYyXW2ylYDfsDjpWovz2z8j9EAiBllYf0UCIhNMH8JIA3dCzmkaAuipJwVk6WeVGQwXm98Nm/MwHVswn/GxQ==}
     dependencies:
-      '@deno/shim-deno': 0.16.1
+      '@deno/shim-deno': 0.17.0
       esbuild: 0.18.20
       gas-entry-generator: 2.6.0
     dev: true
@@ -1671,8 +1671,9 @@ packages:
       is-docker: 2.2.1
     dev: true
 
-  /isexe@2.0.0:
-    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+  /isexe@3.1.1:
+    resolution: {integrity: sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==}
+    engines: {node: '>=16'}
     dev: true
 
   /js-tokens@4.0.0:
@@ -2454,12 +2455,12 @@ packages:
       webidl-conversions: 3.0.1
     dev: true
 
-  /which@2.0.2:
-    resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
-    engines: {node: '>= 8'}
+  /which@4.0.0:
+    resolution: {integrity: sha512-GlaYyEb07DPxYCKhKzplCWBJtvxZcZMrL+4UkrTSJHHPyZU4mYYTv3qaOe77H7EODLSSopAUFAc6W8U4yqvscg==}
+    engines: {node: ^16.13.0 || >=18.0.0}
     hasBin: true
     dependencies:
-      isexe: 2.0.0
+      isexe: 3.1.1
     dev: true
 
   /wrap-ansi@6.2.0:
