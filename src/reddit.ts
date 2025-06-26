@@ -1,10 +1,10 @@
 import { Properties } from './properties';
-import { Interval } from './types';
+import type { Interval } from './types';
 
 export class Reddit {
   readonly token: string;
   readonly youtubeRegex =
-    /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/;
+    /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/ ]{11})/;
   readonly limit;
 
   constructor(limit = 50) {
