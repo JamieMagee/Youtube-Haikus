@@ -12,7 +12,7 @@
     "@biomejs/biome": "2.2.4",
     "@google/clasp": "2.5.0",
     "@tsconfig/recommended": "1.0.10",
-    "@tsconfig/strictest": "2.0.5",
+    "@tsconfig/strictest": "2.0.6",
     "@types/google-apps-script": "2.0.3",
     "esbuild": "0.25.10",
     "esbuild-gas-plugin": "0.10.0",
