@@ -13,7 +13,7 @@ importers:
         version: 2.3.1
       '@google/clasp':
         specifier: 2.5.0
-        version: 2.5.0(@types/node@24.8.1)
+        version: 2.5.0(@types/node@24.9.1)
       '@tsconfig/recommended':
         specifier: 1.0.10
         version: 1.0.10
@@ -39,8 +39,8 @@ packages:
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-validator-identifier@7.27.1':
-    resolution: {integrity: sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==}
+  '@babel/helper-validator-identifier@7.28.5':
+    resolution: {integrity: sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==}
     engines: {node: '>=6.9.0'}
 
   '@biomejs/biome@2.3.1':
@@ -433,8 +433,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@24.8.1':
-    resolution: {integrity: sha512-alv65KGRadQVfVcG69MuB4IzdYVpRwMG/mq8KWOaoOdyY617P5ivaDiMCGOFDWD2sAn5Q0mR3mRtUOgm99hL9Q==}
+  '@types/node@24.9.1':
+    resolution: {integrity: sha512-QoiaXANRkSXK6p0Duvt56W208du4P9Uye9hWLWgGMDTEoKPhuenzNcC4vGUmrNkiOKTlIrBoyNQYNpSwfEZXSg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1357,8 +1357,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@7.14.0:
-    resolution: {integrity: sha512-QQiYxHuyZ9gQUIrmPo3IA+hUl4KYk8uSA7cHrcKd/l3p1OTpZcM0Tbp9x7FAtXdAYhlasd60ncPpgu6ihG6TOA==}
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -1416,11 +1416,11 @@ snapshots:
 
   '@babel/code-frame@7.27.1':
     dependencies:
-      '@babel/helper-validator-identifier': 7.27.1
+      '@babel/helper-validator-identifier': 7.28.5
       js-tokens: 4.0.0
       picocolors: 1.1.1
 
-  '@babel/helper-validator-identifier@7.27.1': {}
+  '@babel/helper-validator-identifier@7.28.5': {}
 
   '@biomejs/biome@2.3.1':
     optionalDependencies:
@@ -1608,7 +1608,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.11':
     optional: true
 
-  '@google/clasp@2.5.0(@types/node@24.8.1)':
+  '@google/clasp@2.5.0(@types/node@24.9.1)':
     dependencies:
       '@sindresorhus/is': 4.6.0
       chalk: 4.1.2
@@ -1623,8 +1623,8 @@ snapshots:
       gaxios: 4.3.3
       google-auth-library: 7.14.1
       googleapis: 84.0.0
-      inquirer: 8.2.7(@types/node@24.8.1)
-      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@24.8.1))
+      inquirer: 8.2.7(@types/node@24.9.1)
+      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@24.9.1))
       is-reachable: 5.2.1
       log-symbols: 5.1.0
       loud-rejection: 2.2.0
@@ -1646,12 +1646,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@inquirer/external-editor@1.0.2(@types/node@24.8.1)':
+  '@inquirer/external-editor@1.0.2(@types/node@24.9.1)':
     dependencies:
       chardet: 2.1.0
       iconv-lite: 0.7.0
     optionalDependencies:
-      '@types/node': 24.8.1
+      '@types/node': 24.9.1
 
   '@sindresorhus/is@4.6.0': {}
 
@@ -1667,7 +1667,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 24.8.1
+      '@types/node': 24.9.1
       '@types/responselike': 1.0.3
 
   '@types/google-apps-script@2.0.7': {}
@@ -1676,19 +1676,19 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 24.8.1
+      '@types/node': 24.9.1
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@24.8.1':
+  '@types/node@24.9.1':
     dependencies:
-      undici-types: 7.14.0
+      undici-types: 7.16.0
 
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 24.8.1
+      '@types/node': 24.9.1
 
   abort-controller@3.0.0:
     dependencies:
@@ -2187,18 +2187,18 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@24.8.1)):
+  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@24.9.1)):
     dependencies:
       ansi-escapes: 4.3.2
       chalk: 2.4.2
       figures: 3.2.0
-      inquirer: 8.2.7(@types/node@24.8.1)
+      inquirer: 8.2.7(@types/node@24.9.1)
       run-async: 2.4.1
       rxjs: 6.6.7
 
-  inquirer@8.2.7(@types/node@24.8.1):
+  inquirer@8.2.7(@types/node@24.9.1):
     dependencies:
-      '@inquirer/external-editor': 1.0.2(@types/node@24.8.1)
+      '@inquirer/external-editor': 1.0.2(@types/node@24.9.1)
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-cursor: 3.1.0
@@ -2675,7 +2675,7 @@ snapshots:
 
   typescript@5.9.3: {}
 
-  undici-types@7.14.0: {}
+  undici-types@7.16.0: {}
 
   universalify@2.0.1: {}
 
