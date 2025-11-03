@@ -13,7 +13,7 @@ importers:
         version: 2.3.2
       '@google/clasp':
         specifier: 2.5.0
-        version: 2.5.0(@types/node@24.9.1)
+        version: 2.5.0(@types/node@24.10.0)
       '@tsconfig/recommended':
         specifier: 1.0.11
         version: 1.0.11
@@ -433,8 +433,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@24.9.1':
-    resolution: {integrity: sha512-QoiaXANRkSXK6p0Duvt56W208du4P9Uye9hWLWgGMDTEoKPhuenzNcC4vGUmrNkiOKTlIrBoyNQYNpSwfEZXSg==}
+  '@types/node@24.10.0':
+    resolution: {integrity: sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -565,8 +565,8 @@ packages:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
-  chardet@2.1.0:
-    resolution: {integrity: sha512-bNFETTG/pM5ryzQ9Ad0lJOTa6HWD/YsScAR3EnCPZRPlQh77JocYktSHOUHelyhm8IARL+o4c4F1bP5KVOjiRA==}
+  chardet@2.1.1:
+    resolution: {integrity: sha512-PsezH1rqdV9VvyNhxxOW32/d75r01NY7TQCmOqomRo15ZSOKbpTFVsfjghxo6JloQUCGnH4k1LGu0R4yCLlWQQ==}
 
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
@@ -1608,7 +1608,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.12':
     optional: true
 
-  '@google/clasp@2.5.0(@types/node@24.9.1)':
+  '@google/clasp@2.5.0(@types/node@24.10.0)':
     dependencies:
       '@sindresorhus/is': 4.6.0
       chalk: 4.1.2
@@ -1623,8 +1623,8 @@ snapshots:
       gaxios: 4.3.3
       google-auth-library: 7.14.1
       googleapis: 84.0.0
-      inquirer: 8.2.7(@types/node@24.9.1)
-      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@24.9.1))
+      inquirer: 8.2.7(@types/node@24.10.0)
+      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@24.10.0))
       is-reachable: 5.2.1
       log-symbols: 5.1.0
       loud-rejection: 2.2.0
@@ -1646,12 +1646,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@inquirer/external-editor@1.0.2(@types/node@24.9.1)':
+  '@inquirer/external-editor@1.0.2(@types/node@24.10.0)':
     dependencies:
-      chardet: 2.1.0
+      chardet: 2.1.1
       iconv-lite: 0.7.0
     optionalDependencies:
-      '@types/node': 24.9.1
+      '@types/node': 24.10.0
 
   '@sindresorhus/is@4.6.0': {}
 
@@ -1667,7 +1667,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 24.9.1
+      '@types/node': 24.10.0
       '@types/responselike': 1.0.3
 
   '@types/google-apps-script@2.0.7': {}
@@ -1676,11 +1676,11 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 24.9.1
+      '@types/node': 24.10.0
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@24.9.1':
+  '@types/node@24.10.0':
     dependencies:
       undici-types: 7.16.0
 
@@ -1688,7 +1688,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 24.9.1
+      '@types/node': 24.10.0
 
   abort-controller@3.0.0:
     dependencies:
@@ -1817,7 +1817,7 @@ snapshots:
 
   chalk@5.6.2: {}
 
-  chardet@2.1.0: {}
+  chardet@2.1.1: {}
 
   chokidar@3.6.0:
     dependencies:
@@ -2187,18 +2187,18 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@24.9.1)):
+  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@24.10.0)):
     dependencies:
       ansi-escapes: 4.3.2
       chalk: 2.4.2
       figures: 3.2.0
-      inquirer: 8.2.7(@types/node@24.9.1)
+      inquirer: 8.2.7(@types/node@24.10.0)
       run-async: 2.4.1
       rxjs: 6.6.7
 
-  inquirer@8.2.7(@types/node@24.9.1):
+  inquirer@8.2.7(@types/node@24.10.0):
     dependencies:
-      '@inquirer/external-editor': 1.0.2(@types/node@24.9.1)
+      '@inquirer/external-editor': 1.0.2(@types/node@24.10.0)
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-cursor: 3.1.0
