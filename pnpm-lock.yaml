@@ -13,7 +13,7 @@ importers:
         version: 2.3.5
       '@google/clasp':
         specifier: 2.5.0
-        version: 2.5.0(@types/node@24.10.0)
+        version: 2.5.0(@types/node@24.10.1)
       '@tsconfig/recommended':
         specifier: 1.0.13
         version: 1.0.13
@@ -433,8 +433,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@24.10.0':
-    resolution: {integrity: sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==}
+  '@types/node@24.10.1':
+    resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1408,8 +1408,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  yocto-queue@1.2.1:
-    resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
+  yocto-queue@1.2.2:
+    resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==}
     engines: {node: '>=12.20'}
 
 snapshots:
@@ -1608,7 +1608,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.0':
     optional: true
 
-  '@google/clasp@2.5.0(@types/node@24.10.0)':
+  '@google/clasp@2.5.0(@types/node@24.10.1)':
     dependencies:
       '@sindresorhus/is': 4.6.0
       chalk: 4.1.2
@@ -1623,8 +1623,8 @@ snapshots:
       gaxios: 4.3.3
       google-auth-library: 7.14.1
       googleapis: 84.0.0
-      inquirer: 8.2.7(@types/node@24.10.0)
-      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@24.10.0))
+      inquirer: 8.2.7(@types/node@24.10.1)
+      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@24.10.1))
       is-reachable: 5.2.1
       log-symbols: 5.1.0
       loud-rejection: 2.2.0
@@ -1646,12 +1646,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@inquirer/external-editor@1.0.3(@types/node@24.10.0)':
+  '@inquirer/external-editor@1.0.3(@types/node@24.10.1)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.0
     optionalDependencies:
-      '@types/node': 24.10.0
+      '@types/node': 24.10.1
 
   '@sindresorhus/is@4.6.0': {}
 
@@ -1667,7 +1667,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 24.10.0
+      '@types/node': 24.10.1
       '@types/responselike': 1.0.3
 
   '@types/google-apps-script@2.0.7': {}
@@ -1676,11 +1676,11 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 24.10.0
+      '@types/node': 24.10.1
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@24.10.0':
+  '@types/node@24.10.1':
     dependencies:
       undici-types: 7.16.0
 
@@ -1688,7 +1688,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 24.10.0
+      '@types/node': 24.10.1
 
   abort-controller@3.0.0:
     dependencies:
@@ -2187,18 +2187,18 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@24.10.0)):
+  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@24.10.1)):
     dependencies:
       ansi-escapes: 4.3.2
       chalk: 2.4.2
       figures: 3.2.0
-      inquirer: 8.2.7(@types/node@24.10.0)
+      inquirer: 8.2.7(@types/node@24.10.1)
       run-async: 2.4.1
       rxjs: 6.6.7
 
-  inquirer@8.2.7(@types/node@24.10.0):
+  inquirer@8.2.7(@types/node@24.10.1):
     dependencies:
-      '@inquirer/external-editor': 1.0.3(@types/node@24.10.0)
+      '@inquirer/external-editor': 1.0.3(@types/node@24.10.1)
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-cursor: 3.1.0
@@ -2437,7 +2437,7 @@ snapshots:
 
   p-limit@4.0.0:
     dependencies:
-      yocto-queue: 1.2.1
+      yocto-queue: 1.2.2
 
   p-locate@5.0.0:
     dependencies:
@@ -2722,4 +2722,4 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  yocto-queue@1.2.1: {}
+  yocto-queue@1.2.2: {}
