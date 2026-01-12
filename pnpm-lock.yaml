@@ -13,7 +13,7 @@ importers:
         version: 2.3.11
       '@google/clasp':
         specifier: 2.5.0
-        version: 2.5.0(@types/node@25.0.3)
+        version: 2.5.0(@types/node@25.0.6)
       '@tsconfig/recommended':
         specifier: 1.0.13
         version: 1.0.13
@@ -433,8 +433,8 @@ packages:
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
 
-  '@types/node@25.0.3':
-    resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
+  '@types/node@25.0.6':
+    resolution: {integrity: sha512-NNu0sjyNxpoiW3YuVFfNz7mxSQ+S4X2G28uqg2s+CzoqoQjLPsWSbsFFyztIAqt2vb8kfEAsJNepMGPTxFDx3Q==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -847,8 +847,8 @@ packages:
     resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
     engines: {node: '>= 6'}
 
-  iconv-lite@0.7.1:
-    resolution: {integrity: sha512-2Tth85cXwGFHfvRgZWszZSvdo+0Xsqmw8k8ZwxScfcBneNUraK+dxRxRm24nszx80Y0TVio8kKLt5sLE7ZCLlw==}
+  iconv-lite@0.7.2:
+    resolution: {integrity: sha512-im9DjEDQ55s9fL4EYzOAv0yMqmMBSZp6G0VvFyTMPKWxiSBHUj9NW/qqLmXUwXrrM7AvqSlTCfvqRb0cM8yYqw==}
     engines: {node: '>=0.10.0'}
 
   ieee754@1.2.1:
@@ -1608,7 +1608,7 @@ snapshots:
   '@esbuild/win32-x64@0.27.2':
     optional: true
 
-  '@google/clasp@2.5.0(@types/node@25.0.3)':
+  '@google/clasp@2.5.0(@types/node@25.0.6)':
     dependencies:
       '@sindresorhus/is': 4.6.0
       chalk: 4.1.2
@@ -1623,8 +1623,8 @@ snapshots:
       gaxios: 4.3.3
       google-auth-library: 7.14.1
       googleapis: 84.0.0
-      inquirer: 8.2.7(@types/node@25.0.3)
-      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@25.0.3))
+      inquirer: 8.2.7(@types/node@25.0.6)
+      inquirer-autocomplete-prompt-ipt: 2.0.0(inquirer@8.2.7(@types/node@25.0.6))
       is-reachable: 5.2.1
       log-symbols: 5.1.0
       loud-rejection: 2.2.0
@@ -1646,12 +1646,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@inquirer/external-editor@1.0.3(@types/node@25.0.3)':
+  '@inquirer/external-editor@1.0.3(@types/node@25.0.6)':
     dependencies:
       chardet: 2.1.1
-      iconv-lite: 0.7.1
+      iconv-lite: 0.7.2
     optionalDependencies:
-      '@types/node': 25.0.3
+      '@types/node': 25.0.6
 
   '@sindresorhus/is@4.6.0': {}
 
@@ -1667,7 +1667,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 25.0.3
+      '@types/node': 25.0.6
       '@types/responselike': 1.0.3
 
   '@types/google-apps-script@2.0.8': {}
@@ -1676,11 +1676,11 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 25.0.3
+      '@types/node': 25.0.6
 
   '@types/minimatch@3.0.5': {}
 
-  '@types/node@25.0.3':
+  '@types/node@25.0.6':
     dependencies:
       undici-types: 7.16.0
 
@@ -1688,7 +1688,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 25.0.3
+      '@types/node': 25.0.6
 
   abort-controller@3.0.0:
     dependencies:
@@ -2175,7 +2175,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  iconv-lite@0.7.1:
+  iconv-lite@0.7.2:
     dependencies:
       safer-buffer: 2.1.2
 
@@ -2187,18 +2187,18 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@25.0.3)):
+  inquirer-autocomplete-prompt-ipt@2.0.0(inquirer@8.2.7(@types/node@25.0.6)):
     dependencies:
       ansi-escapes: 4.3.2
       chalk: 2.4.2
       figures: 3.2.0
-      inquirer: 8.2.7(@types/node@25.0.3)
+      inquirer: 8.2.7(@types/node@25.0.6)
       run-async: 2.4.1
       rxjs: 6.6.7
 
-  inquirer@8.2.7(@types/node@25.0.3):
+  inquirer@8.2.7(@types/node@25.0.6):
     dependencies:
-      '@inquirer/external-editor': 1.0.3(@types/node@25.0.3)
+      '@inquirer/external-editor': 1.0.3(@types/node@25.0.6)
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       cli-cursor: 3.1.0
