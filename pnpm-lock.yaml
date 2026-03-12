@@ -12,8 +12,8 @@ importers:
         specifier: 2.4.6
         version: 2.4.6
       '@google/clasp':
-        specifier: 3.2.0
-        version: 3.2.0(@types/node@20.19.37)(typescript@5.9.3)
+        specifier: 3.3.0
+        version: 3.3.0(@types/node@20.19.37)(typescript@5.9.3)
       '@tsconfig/recommended':
         specifier: 1.0.13
         version: 1.0.13
@@ -417,8 +417,8 @@ packages:
       typescript:
         optional: true
 
-  '@google/clasp@3.2.0':
-    resolution: {integrity: sha512-2RDjrVip6qY29WucVobrEmb1evRllmZ1l4xMltxcQ98KkKtA3fZM24jh30DgdXrLyCe4oqPGuBh69jJwFbrwTg==}
+  '@google/clasp@3.3.0':
+    resolution: {integrity: sha512-0OTjAHes2tJ2z0THECx6xYLB4DaChnQLwwAm3PnzAJUTLwDrW81biaP04K9UKMXea5DqvbuDmveNEZlQhi1Vzg==}
     engines: {node: ' >=20.0.0'}
     hasBin: true
 
@@ -1741,7 +1741,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@google/clasp@3.2.0(@types/node@20.19.37)(typescript@5.9.3)':
+  '@google/clasp@3.3.0(@types/node@20.19.37)(typescript@5.9.3)':
     dependencies:
       '@formatjs/intl': 3.1.8(typescript@5.9.3)
       '@modelcontextprotocol/sdk': 1.27.1(zod@3.25.76)
