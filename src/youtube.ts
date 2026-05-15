@@ -15,18 +15,25 @@ export class Youtube {
     );
 
     if (playlist === undefined) {
+      Logger.log(`Creating new playlist: ${this.playlistTitle}`);
       playlist = this.#createPlaylist();
     } else {
+      Logger.log(`Recreating playlist: ${this.playlistTitle}`);
       playlist = this.#recreatePlaylist(playlist.id);
     }
 
+    let added = 0;
     for (const video of videos) {
       try {
         this.#addVideoToPlaylist(playlist.id, video);
+        added++;
       } catch (e) {
-        Logger.log(e);
+        Logger.log(`Failed to add video ${video}: ${e}`);
       }
     }
+    Logger.log(
+      `Added ${added}/${videos.length} videos to ${this.playlistTitle}`
+    );
   }
 
   #createPlaylist(): GoogleAppsScript.YouTube.Schema.Playlist {
