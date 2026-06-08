@@ -21,8 +21,8 @@ importers:
         specifier: 2.0.8
         version: 2.0.8
       '@types/google-apps-script':
-        specifier: 2.0.9
-        version: 2.0.9
+        specifier: 2.0.11
+        version: 2.0.11
       esbuild:
         specifier: 0.28.0
         version: 0.28.0
@@ -586,8 +586,8 @@ packages:
   '@tsconfig/strictest@2.0.8':
     resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
 
-  '@types/google-apps-script@2.0.9':
-    resolution: {integrity: sha512-HPkV46KuI4y/s7UsaPva9B2jljKGro9rPDuWSMQrOu6vW3ImRpRXrlBDi1m5ON/5gTqOGaFx1vXNfOHdw6j0OA==}
+  '@types/google-apps-script@2.0.11':
+    resolution: {integrity: sha512-D+UWQKXUd4KgScQ+iqqx4jYxZXmU7cYCWHlikmUckIfFvblTcG4d3tQsjJAA261wmFZOya+WWd8L6/0bvSLjHQ==}
 
   '@types/mute-stream@0.0.1':
     resolution: {integrity: sha512-0yQLzYhCqGz7CQPE3iDmYjhb7KMBFOP+tBkyw+/Y2YyDI5wpS7itXXxneN1zSsUwWx3Ji6YiVYrhAnpQGS/vkw==}
@@ -1964,7 +1964,7 @@ snapshots:
 
   '@tsconfig/strictest@2.0.8': {}
 
-  '@types/google-apps-script@2.0.9': {}
+  '@types/google-apps-script@2.0.11': {}
 
   '@types/mute-stream@0.0.1':
     dependencies:
