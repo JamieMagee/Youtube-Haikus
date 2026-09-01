@@ -12,8 +12,8 @@ importers:
         specifier: 2.5.11
         version: 2.5.11
       '@google/clasp':
-        specifier: 3.4.0
-        version: 3.4.0(@types/node@20.19.43)(supports-color@7.2.0)
+        specifier: 3.4.1
+        version: 3.4.1(@types/node@20.19.43)(supports-color@7.2.0)
       '@tsconfig/recommended':
         specifier: 1.0.13
         version: 1.0.13
@@ -406,8 +406,8 @@ packages:
   '@formatjs/intl@4.1.19':
     resolution: {integrity: sha512-bZMROATl+rzfL8wsDZ53i8XWHx5e6rVr8QlGT5GDvHImEUro4WE9pxUd2dobzmI3CtD+zkt/wkEdqcb+3CK8Fg==}
 
-  '@google/clasp@3.4.0':
-    resolution: {integrity: sha512-R1F+LL+nuVuGayj/Qob5E9Eiu1UI1w0DQiB+Rl302wpdungJ5NXOIBoD1DkyI324C4nWs3KhHGJXRCpuOpuS1g==}
+  '@google/clasp@3.4.1':
+    resolution: {integrity: sha512-92wlpu0loC9t4oADuTyJOxQm6T4H2dOD9oQ+BvdFJuzM2uP7cK5dGrrJQhb/m/HLbaR0UOsBXBqRlYbfyR9jbA==}
     engines: {node: ' >=20.0.0'}
     hasBin: true
 
@@ -1904,7 +1904,7 @@ snapshots:
       '@formatjs/icu-messageformat-parser': 3.5.17
       intl-messageformat: 11.2.14
 
-  '@google/clasp@3.4.0(@types/node@20.19.43)(supports-color@7.2.0)':
+  '@google/clasp@3.4.1(@types/node@20.19.43)(supports-color@7.2.0)':
     dependencies:
       '@formatjs/intl': 4.1.19
       '@modelcontextprotocol/sdk': 1.30.0(supports-color@7.2.0)(zod@3.25.76)
