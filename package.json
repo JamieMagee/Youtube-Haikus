@@ -9,11 +9,11 @@
     "push": "clasp push"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.8",
+    "@biomejs/biome": "2.6.9",
     "@google/clasp": "3.4.1",
     "@tsconfig/recommended": "1.0.14",
     "@tsconfig/strictest": "2.0.9",
-    "@types/google-apps-script": "2.0.15",
+    "@types/google-apps-script": "2.0.16",
     "esbuild": "0.28.2",
     "esbuild-gas-plugin": "0.10.0",
     "typescript": "7.0.2"
